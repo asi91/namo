@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Namogoo!</title>
+        <style>
+            body {
+                width: 35em;
+                margin: 0 auto;
+                font-family: Tahoma, Verdana, Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+    {% if data %}
+        <ul>
+            {% for browser, visits in data.items() %}
+            <li><b>{{ browser }}</b> : {{ visits }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <h1>Welcome! Please wait as the data is being processed.</h1>
+    {% endif %}
+    </body>
+</html>
